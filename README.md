@@ -1,2 +1,2 @@
 # agarwalsahil0210_projects
-This repository contains the projects made from day 3 while training in axact studios.
+This repository contains the projects made while training in axact studios.
