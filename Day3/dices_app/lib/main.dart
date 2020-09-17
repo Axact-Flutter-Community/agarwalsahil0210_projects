@@ -6,7 +6,7 @@ void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Scaffold(
-      backgroundColor: Colors.redAccent,
+      backgroundColor: Colors.deepOrange[300],
       appBar: AppBar(
         centerTitle: true,
         title: Text('Dices App'),
@@ -23,34 +23,34 @@ class DicePage extends StatefulWidget {
 }
 
 class _DicePageState extends State<DicePage> {
-  int leftup = 1;
-  int leftdown = 2;
-  int rightup = 3;
-  int rightdown = 4;
+  int Player1 = 1;
+  int Player3 = 2;
+  int Player2 = 3;
+  int Player4 = 4;
   String winner = "";
 
   void dice() {
     setState(() {
-      leftup = Random().nextInt(6) + 1;
-      leftdown = Random().nextInt(6) + 1;
-      rightup = Random().nextInt(6) + 1;
-      rightdown = Random().nextInt(6) + 1;
-      if (leftup > leftdown) {
-        if (leftup > rightup) {
-          if (leftup > rightdown)
-            winner = "left up";
+      Player1 = Random().nextInt(6) + 1;
+      Player3 = Random().nextInt(6) + 1;
+      Player2 = Random().nextInt(6) + 1;
+      Player4 = Random().nextInt(6) + 1;
+      if ( Player1> Player3) {
+        if (Player1 > Player2) {
+          if (Player1 > Player4)
+            winner = "Player 1";
           else
-            winner = "rightdown";
-        } else if (rightup > rightdown) winner = "Right up";
-        else winner = "Right down";
+            winner = "Player 4";
+        } else if (Player2 > Player4) winner = "Player 2";
+        else winner = "Player 4";
       }
       else{
-        if(leftdown>rightup){
-          if(leftdown>rightdown) winner="Left Down";
-          else winner = "Right Down";
+        if(Player3>Player2){
+          if(Player3>Player4) winner="Player 3";
+          else winner = "Player 4";
         }
-        else if(rightup>rightdown) winner = "Right up";
-        else winner = "Right down";
+        else if(Player2>Player4) winner = "Player 2";
+        else winner = "Player 4";
       }
     });
   }
@@ -61,6 +61,7 @@ class _DicePageState extends State<DicePage> {
       child: Column(
         children: <Widget>[
           SizedBox(
+            child: Container(padding: EdgeInsets.fromLTRB(0, 15, 0, 0),child: Text("Player 1                     Player 2", style: TextStyle(fontSize: 20),)),
             height: 60.0,
           ),
           Row(
@@ -70,7 +71,7 @@ class _DicePageState extends State<DicePage> {
                   onPressed: () {
                     dice();
                   },
-                  child: Image.asset('images/dice$leftup.png'),
+                  child: Image.asset('images/dice$Player1.png'),
                 ),
               ),
               Expanded(
@@ -78,12 +79,13 @@ class _DicePageState extends State<DicePage> {
                   onPressed: () {
                     dice();
                   },
-                  child: Image.asset('images/dice$rightup.png'),
+                  child: Image.asset('images/dice$Player2.png'),
                 ),
               )
             ],
           ),
           SizedBox(
+            child: Container(padding: EdgeInsets.fromLTRB(0, 15, 0, 0),child: Text("Player 3                     Player 4", style: TextStyle(fontSize: 20),)),
             height: 60.0,
           ),
           Row(
@@ -93,7 +95,7 @@ class _DicePageState extends State<DicePage> {
                   onPressed: () {
                     dice();
                   },
-                  child: Image.asset('images/dice$leftdown.png'),
+                  child: Image.asset('images/dice$Player3.png'),
                 ),
               ),
               Expanded(
@@ -101,7 +103,7 @@ class _DicePageState extends State<DicePage> {
                   onPressed: () {
                     dice();
                   },
-                  child: Image.asset('images/dice$rightdown.png'),
+                  child: Image.asset('images/dice$Player4.png'),
                 ),
               )
             ],
