@@ -2,6 +2,10 @@
 
 A dice game application
 
+## Screenshot
+---
+![Image](screenshot1.jpg)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
