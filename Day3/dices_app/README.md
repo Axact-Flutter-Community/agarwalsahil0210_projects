@@ -4,7 +4,7 @@ A dice game application
 
 ## Screenshot
 ---
-![Image](screenshot1.jpg)
+![Image](screenshot.jpg)
 
 ## Getting Started
 
