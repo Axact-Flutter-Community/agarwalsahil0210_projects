@@ -3,7 +3,7 @@ import 'question.dart';
 class Brain{
   int _qno =0;
   List<Question> _qbank=[
-    Question('Mahendra Singh Dhoni played 7 finals in the IPL', true),
+    Question('Mahendra Singh Dhoni played 7 finals in the IPL', false),
     Question('AB de Villiers scored the fastest hundred in the IPL', false),
     Question('CSK successfully defended its title in the IPL once', true),
     Question('Virat Kohli scored four hundreds in the 2016 IPL', true),

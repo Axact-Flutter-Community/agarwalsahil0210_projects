@@ -15,11 +15,19 @@ class Quizzler extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.grey.shade900,
-        body: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: QuizPage(),
+
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image:AssetImage("assets/crop.jfif"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: SafeArea(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: QuizPage(),
+            ),
           ),
         ),
       ),
@@ -54,7 +62,7 @@ class _QuizPageState extends State<QuizPage> {
           score++;
         }
         else{
-          scoreKeeper.add(Icon(Icons.check, color: Colors.red,));
+          scoreKeeper.add(Icon(Icons.close, color: Colors.red,));
         }
         brain.nextQuestion();
       }
@@ -77,7 +85,7 @@ class _QuizPageState extends State<QuizPage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),
@@ -90,7 +98,7 @@ class _QuizPageState extends State<QuizPage> {
               textColor: Colors.white,
               color: Colors.green,
               child: Text(
-                'true',
+                'True',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0
@@ -109,7 +117,7 @@ class _QuizPageState extends State<QuizPage> {
               textColor: Colors.white,
               color: Colors.red,
               child: Text(
-                'true',
+                'False',
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 20.0
