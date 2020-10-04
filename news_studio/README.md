@@ -2,6 +2,14 @@
 
 An  application to display news.
 
+# Screenshots
+![Image1](screenshots/newshot1.jpg) | ![Image2](screenshots/newshot2.jpg)
+![Image3](screenshots/newshot3.jpg)
+--- | ---
+
+---
+⭐ Star this repo if you like the app.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
