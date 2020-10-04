@@ -1,6 +1,6 @@
-# imagestack
+# Unsplash Images
 
-A new Flutter application.
+An application to display images in list view from unsplash api.
 
 ## Getting Started
 
